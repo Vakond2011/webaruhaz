@@ -1,0 +1,46 @@
+/* Részletesebb stílusok az "Rólunk" oldalhoz */
+.about-company, .terms-of-use {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-company h1, .terms-of-use h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-company p, .terms-of-use p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-company h2, .terms-of-use h3 {
+    font-size: 20px;
+    color: #444;
+    margin-top: 20px;
+}
+
+.about-company ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-company ul li {
+    margin: 5px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

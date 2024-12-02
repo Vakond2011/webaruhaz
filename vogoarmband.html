@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOGO Armband - Webáruház</title>
+    <link rel="stylesheet" href="stylevogoarmband.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="fo weblap.html">Főoldal</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">Rólunk</a></li>
+                <li><a href="contact.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <h1>VOGO Armband</h1>
+            <div class="product-info">
+                <!-- Termék kép -->
+                <div class="product-image">
+                    <img src="vogoarmband.jpg" alt="VOGO Armband">
+                </div>
+                
+                <!-- Termék leírása -->
+                <div class="product-description">
+                    <h2>Termék leírása</h2>
+                    <p>
+                        A <strong>VOGO Armband</strong> a legmodernebb viselhető eszköz, amely segít nyomon követni az edzéseidet,
+                        sporttevékenységeidet, és biztosítja a maximális kényelemet és megbízhatóságot minden helyzetben.
+                    </p>
+                    <ul>
+                        <li><strong>Ár:</strong> 22.375Ft</li>
+                        <li><strong>Kompatibilitás:</strong> VOGO rendszerekhez, okostelefonokhoz</li>
+                        <li><strong>Funkciók:</strong> Pulzusmérő, lépésszámláló, GPS, vízálló</li>
+                        <li><strong>Színválaszték:</strong> Fekete, Kék, Piros</li>
+                    </ul>
+
+                    <h3>Válasszon színt:</h3>
+                    <form>
+                        <label for="color">Szín:</label>
+                        <select id="color" name="color">
+                            <option value="black">Fekete</option>
+                            <option value="blue">Kék</option>
+                            <option value="red">Piros</option>
+                        </select>
+                    </form>
+                    <br>
+
+                    <!-- Kosárba rakás gomb -->
+                    <button class="add-to-cart-btn" onclick="addToCart()">Kosárba rakom</button>
+                </div>
+            </div>
+
+            <!-- Technikai leírás -->
+            <section class="tech-specs">
+                <h3>Technikai Leírás</h3>
+                <ul>
+                    <li><strong>Kompatibilitás:</strong> VOGO Vokkero, okostelefonok Android és iOS rendszerekkel</li>
+                    <li><strong>Funkciók:</strong> Pulzusmérő, lépésszámláló, GPS, vízálló</li>
+                    <li><strong>Bluetooth:</strong> 4.0</li>
+                    <li><strong>Élettartam:</strong> 48 órás használat</li>
+                    <li><strong>Vízállóság:</strong> IPX7 (fröccsenésálló, zuhanyzás alatt is viselhető)</li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- Kosár értesítés -->
+        <div id="cart-notification" class="cart-notification">
+            <p>Termék hozzáadva a kosárhoz!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Webáruház. Minden jog fenntartva.</p>
+    </footer>
+
+    <script>
+        // Kosárba helyezés
+        document.querySelector('.buy-btn').addEventListener('click', function() {
+            let product = {
+                name: "Headset Twistlock 3,5 mm Set",
+                price: 22.375,
+                image: "headset-twistlock.jpg",
+                quantity: 1
+            };
+
+            // Kosár adatainak tárolása
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Átirányítás a kosár oldalra
+            window.location.href = 'kosar.html';
+        });
+    </script>
+</body>
+</html>

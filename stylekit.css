@@ -1,0 +1,200 @@
+/* Alap stílusok */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Fejléc */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    border-bottom: 5px solid #333;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #333;
+}
+
+/* Szektívek */
+section {
+    padding: 50px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Termékek */
+.product {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.product-images {
+    position: relative;
+    display: inline-block;
+}
+
+.product-images img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    transition: opacity 0.5s ease;
+    border-radius: 8px;
+}
+
+.product-images img.hidden {
+    opacity: 0;
+}
+
+.product h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.price span {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+button.buy-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button.buy-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Fülpárna választó */
+select {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Választó nyilak */
+.arrows {
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+.arrow {
+    cursor: pointer;
+    margin: 0 30px;
+    transition: color 0.3s;
+}
+
+.arrow:hover {
+    color: #4CAF50;
+}
+
+/* Kép váltás stílusok */
+.product-images img.active {
+    opacity: 1;
+}
+
+.product-images img.hidden {
+    opacity: 0;
+}
+
+/* Kapcsolati információk */
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Lábléc */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1rem;
+}

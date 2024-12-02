@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headset Twistlock 3,5 mm Set - Spintso Webáruház</title>
+    <link rel="stylesheet" href="spintsoheadsetstyle.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Spintso Webáruház</h1>
+            <nav>
+                <ul>
+                    <li><a href="fo weblap.html">Kezdőlap</a></li>
+                    <li><a href="kosar.html">Kosár</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="product">
+        <div class="container">
+            <div class="product-info">
+                <h2>Headset Twistlock 3,5 mm Set</h2>
+                <div class="product-images">
+                    <img src="spintsoheadset.avif" alt="Headset Twistlock 3,5mm" id="product-image">
+                </div>
+                <p class="price">Ár: <span id="price">82.929 Ft</span></p>
+                <p><strong>Termék leírása:</strong> A Headset Twistlock 3,5 mm-es csatlakozóval ellátott prémium headset, amely kényelmes használatot biztosít hosszú távú edzés közben is. Tökéletes választás sportolóknak és edzőknek egyaránt.</p>
+                
+                <h3>Technikai adatok:</h3>
+                <ul>
+                    <li><strong>Hangminőség:</strong> Tiszta és részletgazdag hangzás</li>
+                    <li><strong>Csatlakozás:</strong> 3,5 mm-es jack csatlakozó</li>
+                    <li><strong>Kompatibilitás:</strong> Okostelefonok, laptopok, tablet-ek</li>
+                    <li><strong>Fülpárna típus:</strong> Factory Ear Peac</li>
+                    <li><strong>Szín:</strong> Fekete</li>
+                    <li><strong>Garancia:</strong> 1 év</li>
+                </ul>
+
+                <button class="buy-btn">Kosárba helyezés</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Spintso Webáruház | Minden jog fenntartva.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Kosárba helyezés
+        document.querySelector('.buy-btn').addEventListener('click', function() {
+            let product = {
+                name: "Headset Twistlock 3,5 mm Set",
+                price: 19999,
+                image: "headset-twistlock.jpg",
+                quantity: 1
+            };
+
+            // Kosár adatainak tárolása
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Átirányítás a kosár oldalra
+            window.location.href = 'kosar.html';
+        });
+    </script>
+
+    <script src="spintsoheadset.js"></script>
+</body>
+</html>

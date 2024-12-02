@@ -1,0 +1,92 @@
+/* Alapstílusok */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #111;
+    color: white;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.product-page {
+    padding: 40px 0;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-details img {
+    max-width: 50%;
+    height: auto;
+}
+
+.product-info {
+    width: 45%;
+}
+
+.product-info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.product-info p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #155db1;
+}
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+s

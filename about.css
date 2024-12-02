@@ -1,0 +1,138 @@
+/* Alap stílusok */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Fejléc */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4CAF50; /* Friss zöld kiemelés */
+}
+
+/* Main tartalom */
+main {
+    padding: 40px 20px;
+}
+
+/* Szekciók */
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+section ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+section ul li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Linkek */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Reszponzív dizájn */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    header .logo {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+/* Kiemelések */
+strong {
+    color: #4CAF50;
+}
+
+/* Hover effektusok */
+section ul li:hover {
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+

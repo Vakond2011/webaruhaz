@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOGO Vokkero Elite - Webáruház</title>
+    <link rel="stylesheet" href="stylevogo.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="fo weblap.html">Főoldal</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">Rólunk</a></li>
+                <li><a href="contact.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <h1>VOGO Vokkero Elite</h1>
+            <div class="product-info">
+                <!-- Termék kép -->
+                <div class="product-image">
+                    <img src="vogo.jpg" alt="VOGO Vokkero Elite"
+                    height="600px"
+                    width="600px">
+                </div>
+                
+                <!-- Termék leírása és paraméterek -->
+                <div class="product-description">
+                    <h2>Termék leírása</h2>
+                    <p>
+                        A <strong>VOGO Vokkero Elite</strong> egy professzionális vezeték nélküli kommunikációs rendszer,
+                        amelyet sportesemények, rendezvények, és más olyan szituációk számára terveztek, ahol fontos a
+                        gyors és megbízható kommunikáció. A rendszer kiváló hangminőséget biztosít, és lehetővé teszi
+                        a csapatok számára, hogy valós időben kommunikáljanak a versenyek alatt.
+                    </p>
+                    <ul>
+                        <li><strong>Ár:</strong> 583.733 Ft</li>
+                        <li><strong>Kompatibilitás:</strong> Minden sportág, rendezvények, csapatkommunikáció</li>
+                        <li><strong>Jellemzők:</strong> Kiváló hangminőség, hosszú akkumulátor élettartam, könnyen használható</li>
+                    </ul>
+
+                    <!-- Technikai leírás -->
+                    <h3>Technikai Leírás</h3>
+                    <ul>
+                        <li><strong>Kommunikációs Távolság:</strong> 500 m (szabad térben)</li>
+                        <li><strong>Frekvencia:</strong> 2.4 GHz</li>
+                        <li><strong>Akkumulátor élettartam:</strong> 12 óra folyamatos használat</li>
+                        <li><strong>Hangminőség:</strong> HD audio, zajszűrés</li>
+                        <li><strong>Könnyű használat:</strong> Plug-and-play, egyszerű telepítés</li>
+                    </ul>
+                    
+                    <!-- Kosárba rakás gomb -->
+                    <button class="add-to-cart-btn" onclick="addToCart()">Kosárba rakom</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kosár értesítés -->
+        <div id="cart-notification" class="cart-notification">
+            <p>Termék hozzáadva a kosárhoz!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Webáruház. Minden jog fenntartva.</p>
+    </footer>
+
+    <script>
+        // Kosárba helyezés
+        document.querySelector('.buy-btn').addEventListener('click', function() {
+            let product = {
+                name: "Headset Twistlock 3,5 mm Set",
+                price: 583.333,
+                image: "vogo",
+                quantity: 1
+            };
+
+            // Kosár adatainak tárolása
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Átirányítás a kosár oldalra
+            window.location.href = 'kosar.html';
+        });
+    </script>
+</body>
+</html>

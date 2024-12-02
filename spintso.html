@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spintso Refcom II Webáruház</title>
+    <link rel="stylesheet" href="fercom2style.css   ">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Spintso Refcom II - Sporteszköz Webáruház</h1>
+            <nav>
+                <ul>
+                    <li><a href="fo weblap.html">Kezdőlap</a></li>
+                    <li><a href="#products">Termékek</a></li>
+                    <li><a href="about.html">Rólunk</a></li>
+                    <li><a href="co">Kapcsolat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h2>Fedezd fel a Spintso Refcom II-t!</h2>
+            <p>A Spintso Refcom II egy professzionális eszköz, amely segít a sportteljesítmény mérésében és fejlesztésében. Több sportágban alkalmazható, és precíz adatokat biztosít edzők és sportolók számára.</p>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2>Spintso Refcom II - Termék</h2>
+            <div class="product">
+                <img src="refcom II.jpg" alt="Spintso Refcom II" />
+                <h3>Spintso Refcom II</h3>
+                <p class="price">Ár: <span>149,999 Ft</span></p>
+                <p><strong>Termék leírás:</strong></p>
+                <p>A Spintso Refcom II egy fejlett sportteljesítmény-mérő eszköz, amely folyamatos adatokat gyűjt és elemzi a sportoló mozgását. A termék lehetővé teszi a teljesítmény nyomon követését, amely segít az edzés optimalizálásában és a sportoló fejlődésének mérésében.</p>
+
+                <h4>Technikai adatok:</h4>
+                <ul>
+                    <li><strong>Kommunikáció:</strong> Bluetooth 5.0</li>
+                    <li><strong>Üzemidő:</strong> 10-12 óra folyamatos használat</li>
+                    <li><strong>Kompatibilitás:</strong> iOS és Android operációs rendszerek</li>
+                    <li><strong>Mérés típusa:</strong> Sebesség, gyorsulás, távolság, fordulatszám, és még sok más</li>
+                    <li><strong>Sportágak:</strong> Foci, kézilabda, amerikai foci, futás, kerékpározás, és egyéb sportágak</li>
+                    <li><strong>Adatgyűjtési mód:</strong> Valós idejű adatok, Bluetooth kapcsolat</li>
+                    <li><strong>Szín:</strong> Fekete / Szürke</li>
+                    <li><strong>Garancia:</strong> 2 év</li>
+                </ul>
+
+                <button class="buy-btn">Vásárlás</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Rólunk</h2>
+            <p>A Spintso márka elkötelezett a sportteljesítmény javítása iránt. A Refcom II és egyéb termékeink célja, hogy a sportolók számára eszközöket biztosítsanak, amelyek segítik őket a fejlődésükben. Termékeink a legújabb technológiai fejlesztéseket használják, hogy pontos és valós idejű adatokat szolgáltassanak a felhasználók számára.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Kapcsolat</h2>
+            <p>Ha kérdése van a termékkel kapcsolatban, kérjük, vegye fel velünk a kapcsolatot:</p>
+            <ul>
+                <li>Email: info@spintso.hu</li>
+                <li>Telefon: +36 1 234 5678</li>
+                <li>Cím: 1055 Budapest, Kossuth Lajos utca 1.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy;Webáruház | Minden jog fenntartva.</p>
+        </div>
+    </footer>
+    <script>
+        // Kosárba helyezés
+        document.querySelector('.buy-btn').addEventListener('click', function() {
+            let product = {
+                name: "Headset Twistlock 3,5 mm Set",
+                price: 176.520,
+                image: "headset-twistlock.jpg",
+                quantity: 1
+            };
+
+            // Kosár adatainak tárolása
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Átirányítás a kosár oldalra
+            window.location.href = 'kosar.html';
+        });
+    </script>
+</body>
+</html>
